@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Iaroslav Rudenko](https://htmlacademy.ru/profile/id41256).
-* Наставник: `Неизвестно`.
+* Наставник: [Евгений Болтян](https://htmlacademy.ru/profile/id83202).
 
 ---
 
