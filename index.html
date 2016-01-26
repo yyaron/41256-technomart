@@ -5,17 +5,13 @@
         <title>HTML Academy: Техномарт</title>
     </head>
     <body>
+        <form action="https://echo.htmlacademy.ru" method="post">
         <header class="main-header">
             <div class="container">
                 <div class="top-bar">
                     <img class="logo logo-header" src="#" alt="Техномарт" width="220" height="47">
-
-                    <!-- Можно ведь вставить всего один тег <form> в начале документа для всех последующих форм? -->
-
-                    <form action="https://echo.htmlacademy.ru" method="post"></form>
                     <label for="top-bar-search">
-                        Поиск:
-                        <input class="top-bar-search" type="search" name="top-bar-search" id="top-bar-search">
+                        <input class="top-bar-search" type="search" name="top-bar-search" id="top-bar-search" placeholder="Поиск:">
                     </label>
                     <div class="bookmarks">
 
@@ -29,26 +25,26 @@
 
                         <span>Корзина: 0</span>
                     </div>
-                    <a class="btn btn-checkout" href="#">Оформить заказ</a>
+                    <a class="btn-checkout" href="#">Оформить заказ</a>
                 </div>
                 <div class="middle-bar">
-                    <div class="column-left">
+                    <section class="column-left">
                         <p>
                             Интернет-магазин строительных материалов и инструментов для ремонта
                         </p>
-                    </div>
-                    <div class="column-middle">
+                    </section>
+                    <section class="column-middle">
                         <p class="phone">
                             +7 (812) 55-05-55
                         </p>
                         <p class="address">
                             г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8
                         </p>
-                    </div>
-                    <div class="column-right">
-                        <a class="btn btn-login" href="#">Войти</a>
-                        <a class="btn btn-register" href="#">Регистрация</a>
-                    </div>
+                    </section>
+                    <section class="column-right">
+                        <a class="btn-login" href="#">Войти</a>
+                        <a class="btn-register" href="#">Регистрация</a>
+                    </section>
                 </div>
                 <nav class="nav-header">
                     <ul>
@@ -136,25 +132,25 @@
                 <div class="popular-items-list">
                     <article>
                         <p>Перфоратор Bosch BFG 9000</p>
-                        <img src="#" alt="" width="209" height="318">
+                        <img src="#" alt="" width="127" height="112">
                         <span>32500 Р.</span>
                         <a class="btn-buy" href="#">25500 Р.</a>
                     </article>
                     <article>
                         <p>Перфоратор Bosch BFG 3000</p>
-                        <img src="#" alt="" width="209" height="318">
+                        <img src="#" alt="" width="127" height="112">
                         <span>22500 Р.</span>
                         <a class="btn-buy" href="#">15500 Р.</a>
                     </article>
                     <article>
                         <p>Перфоратор Bosch BFG 6000</p>
-                        <img src="#" alt="" width="209" height="318">
+                        <img src="#" alt="" width="127" height="112">
                         <span>30500 Р.</span>
                         <a class="btn-buy" href="#">25500 Р.</a>
                     </article>
                     <article>
                         <p>Перфоратор Bosch BFG 2000</p>
-                        <img src="#" alt="" width="209" height="318">
+                        <img src="#" alt="" width="127" height="112">
                         <img class="new" src="#" alt="">
                         <a class="btn-buy" href="#">12500 Р.</a>
                     </article>
@@ -283,7 +279,7 @@
                         Вы можете забрать товар сами, <br>
                         заехав в наш офис:
                     </p>
-                    <img class="map" src="#" alt="" width="300" height="158">
+                    <a href="#"><img class="map" src="#" alt="" width="300" height="158"></a>
                     <a class="btn" href="#">Заблудились? Напишите нам!</a>
                 </div>
             </div>
@@ -368,5 +364,6 @@
                 </div>
             </div>
         </footer>
+        </form>
     </body>
 </html>
