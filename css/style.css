@@ -1,0 +1,33 @@
+/*Создайте файл style.css в подпапке css в папке проекта. В этом файле пропишите для body и для заголовков двух типов текстовые стили:
+
+размер шрифта,
+высоту строки,
+цвет шрифта,
+жирность шрифта,
+гарнитуру (название шрифта).*/
+
+body {
+    font-family: 'Cuprum';
+    font-size: 14px;
+    line-height: 24px; 
+}
+
+h1 {
+    font-size: 36px;
+}
+
+.slider-page-1 h1 {
+    font-weight: normal; 
+    line-height: 30px;
+    /*color: #fff;*/
+}
+
+.info-delivery h1 {
+    font-weight: bold;
+    color: #32425c; 
+}
+
+h2 {
+    font-size: 30px;
+    color: #000;
+}
