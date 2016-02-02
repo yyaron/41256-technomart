@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Перфораторы - Интернет-магазин строительных материалов Техномарт</title>
+        <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
         <form action="https://echo.htmlacademy.ru" method="post"> <!-- Добавить атрибут oninput! -->
@@ -14,16 +15,10 @@
                         <input class="top-bar-search" type="search" name="top-bar-search" id="top-bar-search" placeholder="Поиск:">
                     </label>
                     <div class="bookmarks">
-
-                        <!-- Здесь для короткого текста лучше использовать <span> или <p>? -->
-
-                        <span>Закладки: 0</span>
+                        <p>Закладки: 0</p>
                     </div>
                     <div class="cart">
-
-                        <!-- Здесь для короткого текста лучше использовать <span> или <p>? -->
-
-                        <span>Корзина: 0</span>
+                        <p>Корзина: 0</p>
                     </div>
                     <a class="btn-checkout" href="#">Оформить заказ</a>
                 </div>
@@ -89,23 +84,20 @@
                 <a href="#">Инструмент</a>
                 <a class="active" href="#">Перфораторы</a>
             </div>
-            <h1 class="page-title">Перфораторы</h1>
+            <h2 class="page-title">Перфораторы</h2>
             <aside class="filter">
-                <label for="keyword">
-                    Фильтр:
-                    <input type="search" name="keyword" id="keyword">
-                </label>
-                <div class="price-filter">
-                    <h2>Цена:</h2>
+                <span>Фильтр:</span> <!-- Поменять span -->
+                <fieldset class="price-filter">
+                    <legend>Цена:</legend>
                     <label for="price-range">
                         <input type="range" name="price-range" id="price-range" min="1" max="30000">
                     </label>
                     <output name="min-price-output"></output>
                     <span> - </span>
                     <output name="max-price-output"></output>
-                </div>
-                <div class="brand-filter">
-                    <h2>Производители:</h2>
+                </fieldset>
+                <fieldset class="brand-filter">
+                    <legend>Производители:</legend>
                     <ul>
                         <li>
                             <label for="bosch">
@@ -138,9 +130,9 @@
                             </label>
                         </li>
                     </ul>
-                </div>
-                <div class="power-type">
-                    <h2>Питание:</h2>
+                </fieldset>
+                <fieldset class="power-type">
+                    <legend>Питание:</legend>
                     <ul>
                         <li>
                             <label for="power-battery">
@@ -155,17 +147,29 @@
                             </label>
                         </li>
                     </ul>
-                </div>
+                </fieldset>
                 <button class="btn-show" type="submit">Показать</button>
             </aside>
             <div class="item-list-container">
                 <div class="sort-by">
-                    <span>Сортировка</span>
-                    <a class="sort-by-price" href="#">По цене</a>
-                    <a class="sort-by-type" href="#">По типу</a>
-                    <a class="sort-by-funct" href="#">По функционалу</a>
-                    <a class="icon to-top" href="#"></a>
-                    <a class="icon to-bottom" href="#"></a>
+                    <span>Сортировка</span> <!-- Поменять span -->
+                    <ul>
+                        <li>
+                            <a class="sort-by-price" href="#">По цене</a>
+                        </li>
+                        <li>
+                            <a class="sort-by-type" href="#">По типу</a>
+                        </li>
+                        <li>
+                            <a class="sort-by-funct" href="#">По функционалу</a>
+                        </li>
+                        <li>
+                            <a class="icon to-top" href="#"></a>
+                        </li>
+                        <li>
+                            <a class="icon to-bottom" href="#"></a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="item-list">
                     <article>
@@ -183,8 +187,8 @@
                     <article>
                         <p>Перфоратор Bosch BFG 2000</p>
                         <!-- <img src="#" alt="" width="127" height="112"> -->
-                        <button class="item-buy" type="button">Купить</button>
-                        <button class="iten-bookmark" type="button">В закладки</button>
+                        <a class="item-buy" href="#">Купить</a>
+                        <a class="iten-bookmark" href="#">В закладки</a>
                         <img class="new" src="#" alt="new">
                         <a class="btn-buy" href="#">12500 Р.</a>
                     </article>
@@ -233,7 +237,7 @@
                 </div>
             </div>
             <div class="wiki">
-                <h1>Пара слов о перфораторах</h1>
+                <h2>Пара слов о перфораторах</h2>
                 <p>
                     Перфоратор&nbsp;&mdash; универсальный строительный инструмент. Предназначен для сверления и&nbsp;долбления отверстий в&nbsp;кирпиче, бетоне и&nbsp;камне. <br>
                     Существуют электромеханические и&nbsp;пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и&nbsp;отбойного молотка. <br>
@@ -251,9 +255,6 @@
                     </p>
                 </div>
                 <div class="footer-right">
-
-                <!-- Уместно ли использовать две отдельные навигационные панели? Т.к. стилизация у них разная -->
-
                     <nav class="nav-footer-1">
                         <ul>
                             <li>
