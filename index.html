@@ -8,9 +8,9 @@
     <body>
         <form action="https://echo.htmlacademy.ru" method="post">
         <header class="main-header">
-            <div class="container">
-                <div class="top-bar">
-                    <img class="logo logo-header" src="#" alt="Техномарт" width="220" height="47">
+            <div class="container clearfix">
+                <div class="top-bar clearfix">
+                    <img class="logo logo-header" src="http://placehold.it/220x47" alt="Техномарт" width="220" height="47">
                     <label for="top-bar-search">
                         <input class="top-bar-search" type="search" name="top-bar-search" id="top-bar-search" placeholder="Поиск:">
                     </label>
@@ -23,12 +23,12 @@
                     <a class="btn-checkout" href="#">Оформить заказ</a>
                 </div>
                 <div class="middle-bar">
-                    <section class="column-left">
+                    <section class="column column-left">
                         <p>
                             Интернет-магазин строительных материалов и инструментов для ремонта
                         </p>
                     </section>
-                    <section class="column-middle">
+                    <section class="column column-middle">
                         <p class="phone">
                             +7 (812) 55-05-55
                         </p>
@@ -36,13 +36,13 @@
                             г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8
                         </p>
                     </section>
-                    <section class="column-right">
+                    <section class="column column-right">
                         <a class="btn-login" href="#">Войти</a>
                         <a class="btn-register" href="#">Регистрация</a>
                     </section>
                 </div>
                 <nav class="nav-header">
-                    <ul>
+                    <ul class="navigation">
                         <li>
                             <a href="#">Главная</a>
                         </li>
@@ -69,55 +69,60 @@
             </div>
         </header>
         <main class="container">
-            <div class="promo-block">
-                <div class="promo-unit materials">
-                    <p>Материалы</p>
-                    <a class="promo-btn" href="#">На любой вкус</a>
-                    <img class="materials-icon" src="#" alt="">
-                    <img class="new" src="#" alt="">
-                </div>
-                <div class="promo-unit tools">
-                    <p>Инструменты</p>
-                    <a class="promo-btn" href="#">На все случаи</a>
-                    <img class="tools-icon" src="#" alt="">
-                </div>
-                <div class="promo-unit machinery">
-                    <p>Техника</p>
-                    <a class="promo-btn" href="#">Для стройки</a>
-                    <img class="machinery-icon" src="#" alt="">
-                    <img class="new" src="#" alt="">
-                </div>
-                <div class="promo-unit discounts">
-                    <p>Скидки 50%</p>
-                    <a class="promo-btn" href="#">Для 350 товаров</a>
-                    <img class="discounts-icon" src="#" alt="">
-                </div>
-                <div class="promo-unit delivery">
-                    <p>Доставка</p>
-                    <a class="promo-btn" href="#">Бесплатно</a>
-                    <img class="delivery-icon" src="#" alt="">
-                    <img class="new" src="#" alt="">
-                </div>
-                <div class="slider">
-                    <div class="slider-page-1">
-                        <p class="slider-title">Перфораторы</p>
-                        <p class="slider-subtitle">Настоящие мужские игрушки</p>
-
-                        <!-- Скорее всего, следующее изображение нужно добавлять через стили, но пока оставим так -->
-
-                        <img class="slider-background-1" src="#" alt="" width="620" height="266">
-                        <a class="btn slider-btn" href="#">Открыть каталог</a>
+            <div class="promo-block clearfix">
+                <div class="promo-block-left">
+                    <div class="promo-unit materials">
+                        <p>Материалы</p>
+                        <a class="promo-btn" href="#">На любой вкус</a>
+                        <img class="materials-icon" src="#" alt="">
+                        <img class="new" src="#" alt="">
                     </div>
-                    <div class="slider-page-2">
-                        <p class="slider-title">Дрели</p>
-                        <p class="slider-subtitle">Соседям на радость!</p>
+                    <div class="promo-unit tools">
+                        <p>Инструменты</p>
+                        <a class="promo-btn" href="#">На все случаи</a>
+                        <img class="tools-icon" src="#" alt="">
+                    </div>
+                    
+                    <div class="slider">
+                        <div class="slider-page slider-page-1">
+                            <p class="slider-title">Перфораторы</p>
+                            <p class="slider-subtitle">Настоящие мужские игрушки</p>
 
-                        <!-- Скорее всего, следующее изображение нужно добавлять через стили, но пока оставим так -->
+                            <!-- Скорее всего, следующее изображение нужно добавлять через стили, но пока оставим так -->
 
-                        <img class="slider-background-2" src="#" alt="" width="620" height="266">
-                        <a class="btn slider-btn" href="#">Открыть каталог</a>
+                            <img class="slider-background-1" src="#" alt="" width="" height="">
+                            <a class="btn slider-btn" href="#">Открыть каталог</a>
+                        </div>
+                        <div class="slider-page slider-page-2">
+                            <p class="slider-title">Дрели</p>
+                            <p class="slider-subtitle">Соседям на радость!</p>
+
+                            <!-- Скорее всего, следующее изображение нужно добавлять через стили, но пока оставим так -->
+
+                            <img class="slider-background-2" src="#" alt="" width="" height="">
+                            <a class="btn slider-btn" href="#">Открыть каталог</a>
+                        </div>
                     </div>
                 </div>
+                <div class="promo-block-right">
+                    <div class="promo-unit machinery">
+                        <p>Техника</p>
+                        <a class="promo-btn" href="#">Для стройки</a>
+                        <img class="machinery-icon" src="#" alt="">
+                        <img class="new" src="#" alt="">
+                    </div>
+                    <div class="promo-unit discounts">
+                        <p>Скидки 50%</p>
+                        <a class="promo-btn" href="#">Для 350 товаров</a>
+                        <img class="discounts-icon" src="#" alt="">
+                    </div>
+                    <div class="promo-unit delivery">
+                        <p>Доставка</p>
+                        <a class="promo-btn" href="#">Бесплатно</a>
+                        <img class="delivery-icon" src="#" alt="">
+                        <img class="new" src="#" alt="">
+                    </div>
+                </div>                
             </div>
             <div class="popular-items">
                 <div class="top-panel">
@@ -276,8 +281,8 @@
                 </div>
             </div>
         </main>
-        <footer>
-            <div class="container">
+        <footer class="main-footer clearfix">
+            <div class="container clearfix">
                 <div class="footer-left">
                     <img class="logo logo-footer" src="#" alt="Техномарт" width="220" height="68">
                     <p>
@@ -290,7 +295,7 @@
                 <!-- Уместно ли использовать две отдельные навигационные панели? Т.к. стилизация у них разная -->
 
                     <nav class="nav-footer-1">
-                        <ul>
+                        <ul class="navigation">
                             <li>
                                 <a href="#">Компания</a>
                             </li>
@@ -312,7 +317,7 @@
                         </ul>
                     </nav>
                     <nav class="nav-footer-2">
-                        <ul>
+                        <ul class="navigation">
                             <li>
                                 <a href="#">Материалы</a>
                             </li>

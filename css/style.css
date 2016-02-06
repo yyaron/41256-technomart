@@ -1,3 +1,7 @@
+/////////////*/
+/*common styles*/
+/*/////////////*/
+
 body {
     font-family: 'Cuprum';
     font-size: 14px;
@@ -22,7 +26,194 @@ h2 {
     line-height: 30px;
 }
 
-/*index page styles*/
+.container {
+    width: 940px;
+    padding: 0 10px;
+    margin: 0 auto;
+    outline: 2px solid #ccc;
+}
+
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
 
 
-/*catalog page styles*/
+/*/////*/
+/*index*/
+/*/////*/
+
+/*grid*/
+
+.main-header {
+    min-height: 260px;
+    padding-bottom: 60px; 
+    outline: 2px solid #ccc;
+}
+
+.promo-block {
+    min-height: 410px;
+    padding-top: 60px;
+    margin-bottom: 55px;
+
+    outline: 2px solid #ccc;
+}
+
+.popular-items {
+    min-height: 430px;
+    margin-bottom: 20px;
+
+    outline: 2px solid #ccc;
+}
+
+.popular-brands {
+    min-height: 420px;
+    margin-bottom: 85px;
+
+    outline: 2px solid #ccc;
+}
+
+.services {
+    min-height: 520px; 
+    margin-bottom: 80px;
+
+    outline: 2px solid #ccc;
+}
+
+.company-info {
+    min-height: 375px;
+
+    outline: 2px solid #ccc;
+}
+
+.main-footer {
+    height: 300px;
+    margin-top: 85px;
+
+    outline: 2px solid #ccc;
+}
+
+/*styles*/
+
+.top-bar {
+    height: 42px;
+    margin-bottom: 0;
+    outline: 2px solid #ccc;
+}
+
+.logo-header {
+    position: absolute;
+    width: 220px;
+    margin-right: 10px;
+}
+
+.top-bar-search {
+    float: left;
+    width: 240px;
+    margin-left: 230px;
+    margin-right: 10px;
+}
+
+.bookmarks {
+    float: left;
+    width: 150px;
+    margin-right: 10px;
+}
+
+.cart {
+    float: left;
+    width: 140px;
+    margin-right: 10px;
+}
+
+.btn-checkout {
+    float: right;
+    width: 150px;
+}
+
+.middle-bar {
+    min-height: 150px;
+    margin-top: 10px;
+
+    outline: 2px solid #ccc;
+}
+
+.column {
+    width: 300px;
+    min-height: 150px;
+    margin-right: 20px;
+
+    outline: 2px solid #ccc;
+}
+
+.column-left {
+    float: left;
+}
+
+.column-middle {
+    float: left;
+}
+
+.column-right {
+    float: right;
+    margin-right: 0;
+}
+
+.nav-header {
+    height: 60px;
+    outline: 2px solid #ccc;
+}
+
+.navigation {
+    list-style: none;
+}
+
+.navigation > li {
+    display: inline-block;
+}
+
+.promo-block-left {
+    width: 620px;
+    margin-right: 20px;
+    float: left;
+}
+
+.promo-block-right {
+    width: 300px;
+    float: right;
+}
+
+.promo-unit {
+    float: left;
+    width: 300px;
+    height: 125px;
+    outline: 2px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.tools {
+    float: right;
+}
+
+
+.slider-page {
+    float: left;
+    width: 620px;
+    height: 270px;
+    outline: 2px solid #ccc;
+}
+
+.slider-page-2 {
+    display: none;
+}
+
+
+
+
+
+
+
+/*///////*/
+/*catalog*/
+/*///////*/
