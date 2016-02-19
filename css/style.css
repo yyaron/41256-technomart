@@ -1,4 +1,4 @@
-/*/////////////*/
+/////////////*/
 /*common styles*/
 /*/////////////*/
 
@@ -19,7 +19,7 @@ body {
     width: 940px;
     padding: 0 10px;
     margin: 0 auto;
-    outline: 2px solid #00ff00;
+    /*outline: 2px solid #00ff00;*/
 }
 
 .clearfix::after {
@@ -66,6 +66,7 @@ h2 {
     background: #f1f5f7;
 }
 
+
 /*common styles - header - top bar*/
 
 .main-header .top-bar {
@@ -80,6 +81,8 @@ h2 {
     width: 220px;
     height: 48px;
 }
+
+/*АКТИВНЫЕ СОСТОЯНИЯ ЛОГОТИПОВ*/
 
 .top-bar .top-bar-search {
     -webkit-box-sizing: border-box;
@@ -491,6 +494,13 @@ h2 {
     border-radius: 3px;
 }
 
+.btn:hover {
+    background-color: #ca2c37;
+}
+
+.btn:active {
+    background-color: #ba2732;
+}
 
 /*common styles - footer*/
 
@@ -665,6 +675,15 @@ h2 {
     text-decoration: none;
 }
 
+.feedback a:hover {
+    text-decoration: underline; 
+}
+
+.feedback a:active {
+    color: #ee3643;
+    text-decoration: none; 
+}
+
 
 /*/////*/
 /*index*/
@@ -724,6 +743,15 @@ main .promo-block {
     line-height: 18px;
     color: #fff;
 }
+
+.promo-unit .promo-unit-btn:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.promo-unit .promo-unit-btn:active {
+    background: rgba(0, 0, 0, 0.3);
+}
+
 
 .promo-block-left .materials {
     background: #f6b22d url("../img/big-icon-materials.png") no-repeat 85% 50%; 
@@ -979,17 +1007,29 @@ main .promo-block {
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
-    background-color: #63a63e;
+    background-color: #63a63e; 
     border: 3px solid #63a63e;
     border-radius: 3px;
 }
 
 .item-actions .buy {
-    border-bottom-color: #488725;
+    position: relative;
+    border-bottom-color: #367315;
+}
+
+.item-actions .buy::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 11px;
+    width: 17px;
+    height: 16px;
+    background: url("../img/icon-basket.png") no-repeat center;
+    opacity: 0.3;
 }
 
 .item-actions .bookmark {
-    color: #000;
+    color: #32425c;
     background-color: #fff;
 }
 
@@ -1025,7 +1065,7 @@ main .promo-block {
     text-decoration: line-through;
 }
 
-.item-controls .btn-buy {
+.item-controls .btn-price {
     display: block;
     position: relative;
     width: 140px;
@@ -1042,7 +1082,7 @@ main .promo-block {
     border-radius: 3px 0 0 3px;
 }
 
-.item-controls .btn-buy::after {
+.item-controls .btn-price::after {
     content: '';
     position: absolute;
     top: 0px;
@@ -1066,6 +1106,33 @@ main .promo-block {
     display: block;
 }
 
+.item:hover {
+    border: none;
+    box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.item-actions .buy:hover {
+    background-color: #5fbb2d;
+    border-color: #5fbb2d;
+    border-bottom-color: #367315;
+}
+
+.item-actions .buy:hover::before {
+    opacity: 1;
+}
+
+.item-actions .bookmark:hover {
+    border-color: #32425c;
+}
+
+.item-actions .buy:active {
+    background-color: #518534;
+    border-color: #518534;
+}
+
+.item-actions .bookmark:active {
+    opacity: 0.3;
+}
 
 /*index - popular brands*/
 
@@ -1107,14 +1174,28 @@ main .promo-block {
     height: 143px;
 }
 
+.popular-brands-list .brand-item:hover {
+    border: none;
+    box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.popular-brands-list .brand-item:active {
+    opacity: 0.5;
+    border: none;
+    box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
 /*index - services*/
 
 .services {
     padding-top: 65px;
     min-height: 520px;
+    min-width: 1000px;
     margin-bottom: 80px;
     background: #f2f6f8;
 }
+
+
 
 .services h2 {
     margin-bottom: 35px;
@@ -1128,6 +1209,7 @@ main .promo-block {
 }
 
 .services-main-block .services-selector {
+    position: relative;
     float: left;
     width: 240px;
     height: 180px;
@@ -1157,6 +1239,21 @@ main .promo-block {
     border-top-color: #fff;
     border-bottom-color: #fff;
     color: #32425c;
+}
+
+.services-selector::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 230px;
+    width: 10px;
+    height: 272px;
+    background: url("../img/line-shadow.png") no-repeat center;
+}
+
+
+.services-selector label:hover {
+    background-color: #293449;
 }
 
 .services-main-block input[type="radio"]:checked + label {
@@ -1395,9 +1492,8 @@ main .promo-block {
     line-height: 18px;
     text-transform: uppercase;
     background-color: #f7f3ec;
+    border-radius: 3px;
 }
-
-
 
 aside fieldset {
     position: relative;
@@ -1460,6 +1556,73 @@ aside label {
     position: relative;
     padding-left: 35px;
     cursor: pointer; 
+}
+
+aside .range-filter {
+    width: 220px;
+    margin-bottom: 10px auto;
+}
+
+.range-filter .range-controls {
+    position: relative;
+    height: 80px;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    background: #f7f3ec;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.range-controls .scale {
+    margin-top: 39px;
+    height: 2px;
+    background: #d7dcde;
+}
+
+.range-controls .bar {
+    height: 2px;
+    background: #00ca74;
+}
+
+.range-controls .toggle{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 4px;
+    height: 4px;
+    background: #ababab;
+    border: 8px solid #fff;
+    box-shadow: 0 1px 1px 1px #d7d4ce;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.range-controls .max-toggle {
+    left: 135px;
+}
+
+.range-filter .price-controls {
+    text-align: center;
+}
+
+.price-controls input {
+    width: 75px;
+    padding: 11px 10px;
+    margin: 0;
+    font-family: font-family: 'PT Sans', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;
+    background: #f7f3ec;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+}
+
+.price-controls span {
+    margin: 0 5px;
 }
 
 .brand-filter label::before {
@@ -1533,6 +1696,11 @@ aside label {
     opacity: 1;
 }
 
+input:disabled + label {
+    opacity: 0.4;
+    cursor: default;
+}
+
 aside .btn-show {
     width: 138px;
     padding: 11px 0;
@@ -1550,10 +1718,11 @@ aside .btn-show {
 
 /*catalog - main content*/
 
+/*catalog - main content - sort-by panel*/
+
 .inner-page .catalog-main {
     float: right;
     width: 700px;
-    /*outline: 2px solid #f00;*/
 }
 
 .catalog-main .sort-by-panel {
@@ -1565,12 +1734,10 @@ aside .btn-show {
     margin: 0;
     padding: 0;
     list-style: none;
-
 }
 
 .sort-by-panel li {
     display: inline-block;
-    
 }
 
 .sort-by-panel .sort-by-price,
@@ -1594,18 +1761,64 @@ aside .btn-show {
 
 .sort-by-panel a.active {
     color: #ee3643;
-    border-bottom: none;
+    border: none;
 }
-
-.sort-by-panel .sort-icon {
-    position: absolute;
-}
-
 
 .sort-by-panel a:hover {
     color: #000;
     border-bottom: 1px solid #ee3643;
 }
+
+.sort-by-panel a:active {
+    color: #ee3643;
+    border: none;
+}
+.sort-by-panel .to-top,
+.sort-by-panel .to-bottom {
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    width: 9px;
+    height: 9px;
+    background: ;
+}
+
+.sort-by-panel .to-top {
+    background: url("../img/icon-up.png") no-repeat center;
+}
+
+.sort-by-panel .to-bottom {
+    right: 17px;
+    background: url("../img/icon-down.png") no-repeat center;
+}
+
+.sort-by-panel .to-top:hover {
+    background: url("../img/icon-up-hover.png") no-repeat center;
+}
+
+.sort-by-panel .to-bottom:hover {
+    background: url("../img/icon-down-hover.png") no-repeat center;
+}
+
+.up .active {
+    background: url("../img/icon-up-active.png") no-repeat center;
+}
+
+.down .active {
+    background: url("../img/icon-down-active.png") no-repeat center;
+}
+
+
+
+
+
+.sort-by-panel .sort-icon,
+.sort-by-panel .sort-icon:hover {
+    border: none;
+}
+
+
+/*catalog - main content - item-list*/
 
 .catalog-main .item-list {
     font-size: 0;
@@ -1646,7 +1859,6 @@ aside .btn-show {
     text-align: center;
     text-transform: uppercase;
     color: #000;
-    
 }
 
 .paginator .btn-page {
@@ -1672,12 +1884,36 @@ aside .btn-show {
     border-color: #ee3643;
 }
 
+.paginator .btn-page:hover,
+aside .btn-show:hover {
+    color: #000;
+    border-color: #bdc6ca;
+    background: #fff;
+}
+
+.paginator .btn-page:active,
+aside .btn-show:active {
+    color: #000;
+    border-color: #ee3643;
+    background: #fff;
+}
+
+.paginator .active:hover,
+.paginator .active:hover {
+    background: #ee3643;
+    color: #fff;
+    border-color: #ee3643;
+    cursor: default;
+}
+
+
 /*catalog - wiki*/
 
 .inner-page .wiki {
     clear: both;
     padding-top: 60px;
     padding-bottom: 60px;
+    margin-top: 60px;
     min-width: 1000px;
     width: 100%; 
     min-height: 100px;
@@ -1687,11 +1923,9 @@ aside .btn-show {
 .wiki h2 {
     padding: 0; 
     margin: 0;
-    /*margin-bottom: 25px;*/
     font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 30px;
     line-height: 36px;
-    
 }
 
 .wiki p {
@@ -1700,4 +1934,105 @@ aside .btn-show {
     font-family: 'PT Sans', 'Arial', sans-serif;
     font-size: 13px;
     line-height: 24px;
+}
+
+
+/*//////*/
+/*popups*/
+/*//////*/
+
+/*popups - added to cart*/
+
+.added-to-cart {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -140px;
+    margin-left: -310px;
+    width: 620px;
+    min-height: 175px;
+    background: #fff url("../img/success-msg.png") no-repeat center;
+    background-position: 80px 50px;
+    border-top: 7px solid #ee3643;
+    box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75);
+    z-index: 1000;
+}
+
+.added-to-cart .success-msg {
+    padding: 65px 0;
+    padding-left: 180px;
+}
+
+ .success-msg p {
+    padding: 0;
+    margin: 0;
+    font-family: 'Cuprum', 'Arial', sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.added-to-cart .controls {
+    padding: 37px 0;
+    text-align: center;
+    background: #f1f1f1;
+}
+
+.controls a {
+    display: inline-block;
+}
+
+.controls a:first-child {
+    margin-right: 16px;
+}
+
+.controls a:last-child{
+    background: #fff;
+    color: #000;
+}
+
+.added-to-cart button {
+    position: absolute;
+    top: 7px;
+    right: 9px;
+    font-size: 0;
+    background-color: transparent;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    z-index: 1500;
+}
+
+.added-to-cart button::before,
+.added-to-cart button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 26px;
+    background: #ee3643;
+    cursor: pointer;
+}
+
+.added-to-cart button::before {
+    transform: rotate(45deg);
+}
+
+.added-to-cart button::after {
+    transform: rotate(-45deg);
+}
+
+
+/*popups - modal overlay*/
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 50;
 }
