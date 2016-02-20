@@ -2143,7 +2143,7 @@ aside .btn-show:active {
 /*popups - map*/
 
 .popup-map {
-    display: block;
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
