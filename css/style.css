@@ -1,11 +1,6 @@
-/////////////*/
+/*/////////////*/
 /*common styles*/
 /*/////////////*/
-
-@font-face {
-    font-family: Cuprum;
-    src: url(fonts/Cuprum/Cuprum-Regular.ttf);
-   }
 
 body {
     font-family: 'Cuprum', 'Arial', sans-serif;
@@ -57,15 +52,14 @@ h2 {
 
 /*common styles - header*/
 
-.main-header {
-    min-height: 260px;
+.main-header { 
+    min-height: 265px;
     min-width: 1000px;
     width: 100%; 
     margin: 0 auto;
     padding-bottom: 60px; 
     background: #f1f5f7;
 }
-
 
 /*common styles - header - top bar*/
 
@@ -76,12 +70,6 @@ h2 {
     color: #fff;
 }
 
-.top-bar .logo-header {
-    position: absolute;
-    width: 220px;
-    height: 48px;
-}
-
 /*АКТИВНЫЕ СОСТОЯНИЯ ЛОГОТИПОВ*/
 
 .top-bar .top-bar-search {
@@ -90,12 +78,12 @@ h2 {
     box-sizing: border-box;
     position: relative;
     float: left;
-    width: 270px;
+    width: 260px;
     height: 42px;
     margin: 0;
     margin-left: 220px;
     padding: 0;
-    padding-left: 50px;
+    padding-left: 49px;
     background: #293449;
     font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 17px;
@@ -125,22 +113,20 @@ h2 {
 }
 
 .top-bar .bookmarks {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
     position: relative;
     float: left;
-    width: 150px;
-    height: 42px;
+    width: 100px;
+    height: 18px;
     padding: 12px 10px;
-    padding-left: 40px; 
+    padding-left: 45px;
+    padding-right: 14px; 
     text-align: center;
 }
 
 .top-bar .bookmarks::before {
     content: '';
     position: absolute;
-    left: 19px;
+    left: 26px;
     top: 12px;
     width: 14px;
     height: 16px;
@@ -149,28 +135,33 @@ h2 {
 }
 
 .top-bar .cart {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
     position: relative;
     float: left;
-    width: 150px;
-    height: 42px;
+    width: 93px;
+    height: 18px;
     padding: 12px 10px;
     padding-left: 40px;
+    padding-right: 18px;
     text-align: center;
 }
 
 .top-bar .cart::before {
     content: '';
     position: absolute;
-    left: 19px;
+    left: 18px;
     top: 12px;
     width: 17px;
     height: 16px;
     opacity: 0.3;
     background: url("../img/icon-cart.png") no-repeat center;
 }
+
+/*active cart with red background*/
+
+.top-bar .cart-active {
+    background: #ee3643;
+}
+
 
 .top-bar .btn-checkout {
     -webkit-box-sizing: border-box;
@@ -217,9 +208,28 @@ h2 {
 /*common styles - header - middle bar*/
 
 .middle-bar {
+    position: relative;
     min-height: 150px;
     margin-top: 10px;
 }
+
+.middle-bar .logo-header {
+    position: absolute;
+    top: -52px;
+    left: 0px;
+    width: 220px;
+    height: 47px;
+    background: url("../img/header-logo.png") no-repeat center;
+}
+
+.middle-bar .logo-header:hover {
+    background: url("../img/header-logo-hover.png") no-repeat center;
+}
+
+.middle-bar .logo-header:active {
+    background: url("../img/header-logo-active.png") no-repeat center;
+}
+
 
 .middle-bar p {
     margin: 0;
@@ -228,16 +238,16 @@ h2 {
 
 .middle-bar .column {
     width: 300px;
-    min-height: 105px;
-    padding-top: 45px;
+    min-height: 100px;
+    padding-top: 36px;
 }
 
 .middle-bar .column-left {
-    width: 245px;
+    width: 235px;
     min-height: 100px;
     float: left;
-    padding-top: 50px;
-    padding-left: 55px;
+    padding-top: 40px;
+    padding-left: 50px;
     margin-right: 20px;
     font-style: italic;
     font-size: 16px;
@@ -259,11 +269,15 @@ h2 {
     padding-top: 8px;
     padding-left: 70px;
     margin: 0 auto;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     border: 3px solid #fff;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 21px;
+    font-weight: 500;
     line-height: 24px;
     color: #e9292a;  
+    background: url("../img/icon-phone.png") no-repeat left center;
+    background-position: 13px center
 }
 
 .column-middle p {
@@ -281,6 +295,7 @@ h2 {
 .column-right .user-panel {
     width: auto;
     height: auto;
+    /*padding-left: 20px;*/
     text-align: center;
     font-size: 0;
 }
@@ -289,7 +304,7 @@ h2 {
 .column-right .btn-register {
     display: inline-block;
     vertical-align: top;
-    padding: 11px 20px;
+    padding: 11px 25px;
     font-size: 21px;
     line-height: 23px;
     color: #000;
@@ -299,6 +314,7 @@ h2 {
 
 .column-right .btn-login {
     padding-left: 45px;
+    margin-left: 20px;
     margin-right: 10px;
     background: #fff url("../img/icon-login.png") no-repeat left center;
     background-position: 15px center;
@@ -331,8 +347,9 @@ h2 {
     position: relative;
     height: 23px;
     padding: 11px 15px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     background: #fff;
+    text-align: left;
 }
 
 .profile-info .user-name {
@@ -340,8 +357,9 @@ h2 {
     line-height: 23px;
     color: #000;
     text-decoration: none;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 32px;
+    padding-right: 20px;
+
 }
 
 .profile-info .btn-dashboard,
@@ -363,8 +381,8 @@ h2 {
 
 .profile-info .btn-logout { 
     position: absolute;
-    top: 13px;
-    right: 14px;
+    top: 14px;
+    right: 11px;
     width: 21px;
     height: 17px;
     background: url("../img/icon-logout.png") no-repeat center;
@@ -373,10 +391,11 @@ h2 {
 .user-panel .profile-controls {
     width: 280px;
     padding: 0;
+    text-align: left;
 }
 
 .profile-controls a {
-    margin: 0 18px;
+    margin: 0 17px;
     font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 16px;
     line-height: 18px;
@@ -443,8 +462,8 @@ h2 {
     display: inline-block;
     vertical-align: top;
     text-align: center;
-    height: 17px;
-    padding: 19px 30px;
+    height: 24px;
+    padding: 15px 30px;
     border-bottom: 5px solid #293449; 
 }
 
@@ -502,28 +521,29 @@ h2 {
     background-color: #ba2732;
 }
 
+
 /*common styles - footer*/
 
 .main-footer {
     min-width: 1000px;
     width: 100%; 
     min-height: 300px;
-/*    margin-top: 85px;*/
     background: #32425c;
     color: #fff;
 }
 
+
 /*common styles - footer - footer-top*/
 
 .main-footer .footer-top {
-    padding-bottom: 50px;
+    padding-bottom: 49px;
 }
 
 .main-footer .footer-top-left {
     position: relative;
     float: left;
-    width: 380px;
-    padding-top: 105px;
+    width: 370px;
+    padding-top: 98px;
 }
 
 .footer-top-left .logo-footer {
@@ -541,7 +561,7 @@ h2 {
 
 .main-footer .footer-top-right {
     float: right;
-    width: 550px;
+    width: 560px;
 }
 
 .footer-top-right .navigation {
@@ -554,8 +574,18 @@ h2 {
 .navigation li {
     display: inline-block;
     vertical-align: top;
-    padding: 20px;
+    padding: 16px 0;
+    padding-right: 30px;
+    padding-left: 30px;
     text-align: center;
+}
+
+.navigation li:first-child {
+    padding-left: 7px;
+}
+
+.navigation li:last-child {
+    padding-right: 0;
 }
 
 .navigation a {
@@ -577,14 +607,17 @@ h2 {
     color: #ffd180;
 }
 
-.navigation li:hover {
-    text-decoration: underline;
+.nav-footer-1 a:hover {
+    border-bottom: 1px solid #fff;
+}
+
+.nav-footer-2 a:hover {
+    border-bottom: 1px solid #ffd180;
 }
 
 .navigation li:active a {
     opacity: 0.5;
 }
-
 
 /*common styles - footer - footer-bottom*/
 
@@ -607,6 +640,7 @@ h2 {
 }
 
 .footer-bottom .copyright {
+    width: 325px;
     float: left;
     margin-right: 10px;
     font-size: 16px;
@@ -615,7 +649,7 @@ h2 {
 
 .footer-bottom .social {
     float: left;
-    width: 220px;
+    width: 245px;
     text-align: center
 }
 
@@ -693,8 +727,8 @@ h2 {
 
 main .promo-block {
     min-height: 410px;
-    padding-top: 60px;
-    margin-bottom: 55px;
+    padding-top: 55px;
+    margin-bottom: 52px;
 }
 
 .promo-block .promo-block-left {
@@ -729,7 +763,7 @@ main .promo-block {
     display: block;
     width: 100px;
     height: 18px;
-    padding: 10px 20px;
+    padding: 10px 18px;
     margin-top: 12px;
     background: rgba(0, 0, 0, 0.1);
     border-radius: 3px;
@@ -754,12 +788,12 @@ main .promo-block {
 
 
 .promo-block-left .materials {
-    background: #f6b22d url("../img/big-icon-materials.png") no-repeat 85% 50%; 
+    background: #f6b22d url("../img/big-icon-materials.png") no-repeat 83% 50%; 
 }
 
 .promo-block-left .tools {
     float: right;
-    background: #4aafde url("../img/big-icon-tools.png") no-repeat 90% 50%;
+    background: #4aafde url("../img/big-icon-tools.png") no-repeat 87% 50%;
 }
 
 .promo-block-left .slider {
@@ -795,7 +829,7 @@ main .promo-block {
 }
 
 .slide .slide-title {
-    margin-top: 20px;
+    margin-top: 17px;
     margin-left: 25px;
     font-size: 36px;
     line-height: 48px;
@@ -804,7 +838,7 @@ main .promo-block {
 }
 
 .slide .slide-subtitle {
-    margin-top: 0px;
+    margin-top: -5px;
     margin-left: 25px;
     font-family: 'PT Sans', 'Arial', sans-serif;
     font-size: 18px;
@@ -821,11 +855,11 @@ main .promo-block {
 
 .slider .slider-controls {
     position: absolute;
-    bottom: 35px;
+    bottom: 50px;
     left: 50%;
     width: 100px;
     height: 0;
-    margin-left: -40px;
+    margin-left: -50px;
     z-index: 20;
     text-align: center;
 }
@@ -861,8 +895,8 @@ main .promo-block {
 .slider-controls label:nth-child(1)::before {
     content: '';
     position: absolute;
-    top: -125px;
-    left: -270px;
+    top: -112px;
+    left: -260px;
     width: 4px;
     height: 30px;
     background-color: #fff;
@@ -872,8 +906,8 @@ main .promo-block {
 .slider-controls label:nth-child(1)::after {
     content: '';
     position: absolute;
-    top: -106px;
-    left: -270px;
+    top: -93px;
+    left: -260px;
     width: 4px;
     height: 30px;
     background-color: #fff;
@@ -884,8 +918,8 @@ main .promo-block {
 .slider-controls label:nth-child(2)::before {
     content: '';
     position: absolute;
-    top: -125px;
-    left: 260px;
+    top: -112px;
+    left: 270px;
     width: 4px;
     height: 30px;
     background-color: #fff;
@@ -895,8 +929,8 @@ main .promo-block {
 .slider-controls label:nth-child(2)::after {
     content: '';
     position: absolute;
-    top: -106px;
-    left: 260px;
+    top: -93px;
+    left: 270px;
     width: 4px;
     height: 30px;
     background-color: #fff;
@@ -908,7 +942,7 @@ main .promo-block {
 }
 
 .promo-block-right .discounts {
-    background: #85d179 url("../img/big-icon-discounts.png") no-repeat 85% 50%;
+    background: #85d179 url("../img/big-icon-discounts.png") no-repeat 80% 50%;
 }
 
 .promo-block-right .delivery {
@@ -923,7 +957,7 @@ main .promo-block {
 .popular-brands .top-panel {
     height: 40px;
     padding: 25px;
-    padding-left: 30px;
+    padding-left: 25px;
     margin-bottom: 20px;
     background: #f7f3ec;
 }
@@ -932,9 +966,10 @@ main .promo-block {
     float: left;
     padding: 0;
     margin: 0;
-    margin-top: 5px;
+    padding-top: 10px;
     font-size: 30px;
     line-height: 36px;
+    color: #32425c;
 }
 
 .top-panel a {
@@ -1047,8 +1082,8 @@ main .promo-block {
     min-height: 40px;
     padding: 0 25px;
     margin: 0;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    margin-top: 7px;
+    margin-bottom: 13px;
     font-size: 18px;
     line-height: 20px;
 }
@@ -1058,7 +1093,7 @@ main .promo-block {
     min-height: 18px;
     padding: 0;
     margin: 0;
-    margin-bottom: 12px;
+    margin-bottom:10px;
     font-size: 17px;
     line-height: 18px;
     color: #999;
@@ -1134,6 +1169,7 @@ main .promo-block {
     opacity: 0.3;
 }
 
+
 /*index - popular brands*/
 
 .popular-brands {
@@ -1188,20 +1224,22 @@ main .promo-block {
 /*index - services*/
 
 .services {
-    padding-top: 65px;
-    min-height: 520px;
+    padding-top: 35px;
+    min-height: 485px;
     min-width: 1000px;
-    margin-bottom: 80px;
+    margin-bottom: 75px;
     background: #f2f6f8;
 }
 
-
-
 .services h2 {
-    margin-bottom: 35px;
+    padding: 0
+    margin: 0;
+    margin-bottom: 25px;
 }
 
 .services p {
+    padding: 0
+    margin: 0;
     font-family: 'PT Sans', 'Arial', sans-serif;
     font-size: 13px;
     line-height: 24px;
@@ -1222,8 +1260,8 @@ main .promo-block {
 
 .services-selector label {
     display: block;
-    height: 27px;
-    padding: 16px 20px;
+    height: 34px;
+    padding: 12px 22px;
     font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 21px;
     line-height: 30px;
@@ -1251,7 +1289,6 @@ main .promo-block {
     background: url("../img/line-shadow.png") no-repeat center;
 }
 
-
 .services-selector label:hover {
     background-color: #293449;
 }
@@ -1263,13 +1300,13 @@ main .promo-block {
     color: #32425c;
 }
 
-.services-main-block .services-info {
+.services-info {
     position: relative;
-    float: left;
+    top: -190px;
+    left: 320px;
     width: 620px;
     min-height: 280px;
     margin: 0;
-    outline: 2px solid #00f;
 }
 
 .services-info .info {
@@ -1280,7 +1317,7 @@ main .promo-block {
 
 .info h1 {
     margin: 0;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
 }
 
 .services-info img{
@@ -1294,7 +1331,7 @@ main .promo-block {
 }
 
 .info-credit p {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .info-credit img{
@@ -1302,11 +1339,12 @@ main .promo-block {
 }
 
 .info-credit .btn-request {
-    max-width: 195px;
+    padding: 12px 0;
+    width: 195px;
 }
 
 .services-info .info-delivery {
-    display: block;
+    display: none;
 }
 
 .services-info .info-warranty {
@@ -1317,11 +1355,9 @@ main .promo-block {
     display: none;
 }
 
-
-/*ВСЁ ЕЩЕ НЕИСПРАВНЫЙ СЕЛЕКТОР ДЛЯ ПЕРЕКЛЮЧЕНИЯ УСЛУГ*/
-
 #selector-delivery:checked ~ .services-info .info-delivery,
-#selector-warranty:checked ~ .services-info .info-warranty {
+#selector-warranty:checked ~ .services-info .info-warranty,
+#selector-credit:checked ~ .services-info .info-credit {
     display: block;
 }
 
@@ -1339,14 +1375,16 @@ main .promo-block {
 }
 
 .company-info h2 {
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
 .company-info p {
     font-family: 'PT Sans', 'Arial', sans-serif;
     font-size: 13px;
     line-height: 24px;
+    margin: 0;
+    margin-top: 25px;
     margin-bottom: 20px;
 }
 
@@ -1356,6 +1394,10 @@ main .promo-block {
 }
 
 .description ul {
+    padding: 0;
+    padding-left: 35px;
+    margin: 0;
+    margin-bottom: 15px;
     list-style: none;
     font-size: 18px;
     line-height: 20px;
@@ -1371,7 +1413,7 @@ main .promo-block {
     position: absolute;
     content: '';
     top: 9px;
-    left: -40px;    
+    left: -35px;    
     width: 25px;
     height: 2px;
     background: #fb565a;
@@ -1411,13 +1453,14 @@ main .promo-block {
 
 .inner-page .breadcrumbs {
     position: relative;
-    padding-left: 60px;
-    margin: 22px 0;
+    padding-left: 55px;
+    margin: 15px 0;
+    margin-bottom: 20px;
 }
 
 .breadcrumbs a {
     position: relative;
-    margin-right: 40px;
+    margin-right: 35px;
     font-family: 'PT Sans', 'Arial', sans-serif;
     font-size: 13px;
     line-height: 18px;
@@ -1464,6 +1507,7 @@ main .promo-block {
 .inner-page .top-panel {
     height: 30px;
     padding: 30px;
+    padding-top: 27px;
     margin-bottom: 20px;
     background: #f2f6f8;
 }
@@ -1485,7 +1529,7 @@ main .promo-block {
 }
 
 .inner-page .panel{
-    padding: 10px 20px;
+    padding: 12px 20px;
     margin-bottom: 10px;
     font-family: 'PT Sans', 'Arial', sans-serif;
     font-size: 13px;
@@ -1501,7 +1545,7 @@ aside fieldset {
     padding: 0;
     padding-bottom: 25px;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 aside fieldset::after {
@@ -1522,7 +1566,7 @@ aside fieldset:last-of-type::after {
 aside legend {
     padding: 0;
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 13px;
     font-family: 'PT Sans', 'Arial', sans-serif;
     font-size: 17px;
     line-height: 30px;
@@ -1539,7 +1583,7 @@ aside ul {
 }
 
 aside li {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     text-transform: uppercase;
 }
 
@@ -1607,10 +1651,10 @@ aside .range-filter {
 
 .price-controls input {
     width: 75px;
-    padding: 11px 10px;
+    padding: 10px 10px;
     margin: 0;
-    font-family: font-family: 'PT Sans', 'Arial', sans-serif;
-    font-size: 16px;
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-size: 17px;
     line-height: 18px;
     font-style: normal;
     font-weight: 300;
@@ -1704,7 +1748,7 @@ input:disabled + label {
 aside .btn-show {
     width: 138px;
     padding: 11px 0;
-    margin-top: 55px;
+    margin-top: 40px;
     font-family: 'PT Sans', 'Arial', sans-serif;
     font-size: 13px;
     line-height: 18px;
@@ -1742,11 +1786,11 @@ aside .btn-show {
 
 .sort-by-panel .sort-by-price,
 .sort-by-panel .sort-by-type {
-    margin-right: 62px;
+    margin-right: 63px;
 }
 
 .sort-by-panel span {
-    margin-right: 140px;
+    margin-right: 135px;
 }
 
 .sort-by-panel a {
@@ -1776,7 +1820,7 @@ aside .btn-show {
 .sort-by-panel .to-top,
 .sort-by-panel .to-bottom {
     position: absolute;
-    top: 15px;
+    top: 16px;
     right: 50px;
     width: 9px;
     height: 9px;
@@ -1808,10 +1852,6 @@ aside .btn-show {
     background: url("../img/icon-down-active.png") no-repeat center;
 }
 
-
-
-
-
 .sort-by-panel .sort-icon,
 .sort-by-panel .sort-icon:hover {
     border: none;
@@ -1836,7 +1876,7 @@ aside .btn-show {
 /*catalog - paginator*/
 
 .paginator {
-    margin-top: 35px;
+    margin-top: 30px;
     font-size: 0;
 }
 
@@ -1912,7 +1952,7 @@ aside .btn-show:active {
 .inner-page .wiki {
     clear: both;
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 68px;
     margin-top: 60px;
     min-width: 1000px;
     width: 100%; 
@@ -1926,6 +1966,7 @@ aside .btn-show:active {
     font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 30px;
     line-height: 36px;
+    margin-bottom: 25px;
 }
 
 .wiki p {
@@ -1940,6 +1981,81 @@ aside .btn-show:active {
 /*//////*/
 /*popups*/
 /*//////*/
+
+/*popups - write us*/
+
+.write-us {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -220px;
+    margin-left: -310px;
+    width: 620px;
+    min-height: 175px;
+    font-family: 'Cuprum', 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    background: #fff;
+    background-position: 80px 50px;
+    border-top: 7px solid #ee3643;
+    box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75);
+    z-index: 1000;
+}
+
+.write-us .details {
+    padding: 45px 80px 35px;
+}
+
+.write-us .details-left,
+.write-us .details-right {
+    width: 220px;
+}
+
+.write-us .details-left {
+    float: left;
+}
+
+.write-us .details-right {
+    float: right;
+}
+
+.details-right input,
+.details-left input {
+    width: 188px;
+    padding: 5px 14px;
+    margin-top: 10px;
+    margin-bottom: 19px;
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    border: 2px solid #d7dcde;
+    border-radius: 3px;
+}
+
+.write-us textarea {
+    width: 428px;
+    height: 90px;
+    padding: 10px 14px;
+    margin-top: 10px;
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    border: 2px solid #d7dcde;
+    border-radius: 3px;
+}
+
+.write-us-controls {
+    padding: 37px 0;
+    text-align: center;
+    background: #f1f1f1;
+}
+
+.write-us-controls a {
+    width: 350px;
+    margin: 0 auto;
+}
+
 
 /*popups - added to cart*/
 
@@ -1972,29 +2088,29 @@ aside .btn-show:active {
     line-height: 36px;
 }
 
-.added-to-cart .controls {
+.added-to-cart-controls {
     padding: 37px 0;
     text-align: center;
     background: #f1f1f1;
 }
 
-.controls a {
+.added-to-cart-controls a {
     display: inline-block;
 }
 
-.controls a:first-child {
+.added-to-cart-controls a:first-child {
     margin-right: 16px;
 }
 
-.controls a:last-child{
+.added-to-cart-controls a:last-child{
     background: #fff;
     color: #000;
 }
 
-.added-to-cart button {
+.btn-close {
     position: absolute;
     top: 7px;
-    right: 9px;
+    right: 10px;
     font-size: 0;
     background-color: transparent;
     border:none;
@@ -2003,8 +2119,8 @@ aside .btn-show:active {
     z-index: 1500;
 }
 
-.added-to-cart button::before,
-.added-to-cart button::after {
+.btn-close::before,
+.btn-close::after {
     content: '';
     position: absolute;
     top: 0;
@@ -2015,12 +2131,34 @@ aside .btn-show:active {
     cursor: pointer;
 }
 
-.added-to-cart button::before {
+.btn-close::before {
     transform: rotate(45deg);
 }
 
-.added-to-cart button::after {
+.btn-close::after {
     transform: rotate(-45deg);
+}
+
+
+/*popups - map*/
+
+.popup-map {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -450px;
+    width: 900px;
+    min-height: 400px;
+    background: #ccc;
+    border-top: 7px solid #ee3643;
+    box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75);
+    z-index: 1000;
+}
+
+.popup-map .btn-close {
+    right: -35px;
 }
 
 
