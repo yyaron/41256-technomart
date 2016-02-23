@@ -6,6 +6,7 @@ body {
     font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 17px;
     line-height: 18px;
+    font-style: normal;
     margin: 0;
     padding: 0; 
 }
@@ -69,8 +70,6 @@ h2 {
     background: #293449;
     color: #fff;
 }
-
-/*АКТИВНЫЕ СОСТОЯНИЯ ЛОГОТИПОВ*/
 
 .top-bar .top-bar-search {
     -webkit-box-sizing: border-box;
@@ -219,17 +218,19 @@ h2 {
     left: 0px;
     width: 220px;
     height: 47px;
-    background: url("../img/header-logo.png") no-repeat center;
+    background: #ee3643 url("../img/img-spritesheet.png") no-repeat center;
+    background-position: -5px -5px;
 }
 
-.middle-bar .logo-header:hover {
-    background: url("../img/header-logo-hover.png") no-repeat center;
+.inner-page .logo-header:hover {
+    background: #ee3643 url("../img/img-spritesheet.png") no-repeat center;
+    background-position: -5px -119px;
 }
 
-.middle-bar .logo-header:active {
-    background: url("../img/header-logo-active.png") no-repeat center;
+.inner-page .logo-header:active {
+    background: #ee3643 url("../img/img-spritesheet.png") no-repeat center;
+    background-position: -5px -62px;
 }
-
 
 .middle-bar p {
     margin: 0;
@@ -259,7 +260,7 @@ h2 {
     float: left;
 }
 
-.column-middle span {
+.column-middle .phone {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -280,7 +281,7 @@ h2 {
     background-position: 13px center
 }
 
-.column-middle p {
+.column-middle .address {
     font-size: 14px;
     line-height: 24px;
     color: #32425c;
@@ -759,6 +760,11 @@ main .promo-block {
     line-height: 30px;
 }
 
+.promo-unit p {
+    padding: 0;
+    margin: 0;
+}
+
 .promo-unit .promo-unit-btn {
     display: block;
     width: 100px;
@@ -813,12 +819,14 @@ main .promo-block {
 }
 
 .slider .slide:nth-child(1) {
-    background: #ccc url("../img/index-slider-1.jpg") no-repeat center;
+    background: #ccc url("../img/img-spritesheet.png") no-repeat center;
+    background-position: -5px -176px;
 }
 
 .slider .slide:nth-child(2) {
     display: none;
-    background: #ccc url("../img/index-slider-2.jpg") no-repeat center;
+    background: #ccc url("../img/img-spritesheet.png") no-repeat center;
+    background-position: -5px -452px;
 }
 
 .slide p {
@@ -871,6 +879,7 @@ main .promo-block {
 
 .slider-controls label {
     display: inline-block;
+    text-align: top;
     position: relative;
     width: 6px;
     height: 6px;
@@ -879,7 +888,6 @@ main .promo-block {
     border: 2px solid #fff;
     border-radius: 50%;
     cursor: pointer;
-    text-align: top;
 }
 
 #slide-1-toggle:checked ~ .slider-controls label[for="slide-1-toggle"],
@@ -976,10 +984,6 @@ main .promo-block {
     float: right;
 }
 
-.popular-items {
-    margin-bottom: 20px;
-}
-
 .popular-items-list {
     font-size: 0;
     padding: 0;
@@ -994,16 +998,17 @@ main .promo-block {
 
 .item {
     display: inline-block;
+    vertical-align: top;
     position: relative;
     width: 218px;
     padding-bottom: 20px;
     margin-right: 20px;
+    margin-bottom: 20px;
     font-family: 'PT Sans', 'Arial', sans-serif;
     font-size: 18px;
     line-height: 20px;
     font-weight: 600;
     text-align: center;
-    vertical-align: top;
     border: 1px solid #e5e5e5;
 }
 
@@ -1059,7 +1064,7 @@ main .promo-block {
     left: 11px;
     width: 17px;
     height: 16px;
-    background: url("../img/icon-basket.png") no-repeat center;
+    background: url("../img/icon-cart.png") no-repeat center;
     opacity: 0.3;
 }
 
@@ -1120,11 +1125,11 @@ main .promo-block {
 .item-controls .btn-price::after {
     content: '';
     position: absolute;
-    top: 0px;
-    left: 121px;
+    top: -2px;
+    left: 119px;
     width: 0;
     height: 0;
-    border: 19px solid #fff;
+    border: 21px solid #fff;
 
     border-left-color: transparent;
 }
@@ -1174,7 +1179,7 @@ main .promo-block {
 
 .popular-brands {
     min-height: 420px;
-    margin-bottom: 85px;
+    margin-bottom: 65px;
 }
 
 .popular-brands .popular-brands-list {
@@ -1198,9 +1203,9 @@ main .promo-block {
     margin-right: 0;
 }
 
-.popular-brands-list .brand-item:nth-child(n+4) {
+/*.popular-brands-list .brand-item:nth-child(n+4) {
     margin-bottom: 0;
-}
+}*/
 
 .brand-item img {
     position: absolute;
@@ -1238,6 +1243,7 @@ main .promo-block {
 }
 
 .services p {
+    width: 400px;
     padding: 0
     margin: 0;
     font-family: 'PT Sans', 'Arial', sans-serif;
@@ -1326,6 +1332,10 @@ main .promo-block {
     left: 155px;
 }
 
+.info-delivery img {
+    top: 20px;
+}
+
 .info-warranty img{
     left: 240px;
 }
@@ -1391,6 +1401,10 @@ main .promo-block {
 .company-info .description {
     float: left;
     width: 540px;
+}
+
+.description p:last-of-type {
+    width: 400px;
 }
 
 .description ul {
@@ -1782,6 +1796,7 @@ aside .btn-show {
 
 .sort-by-panel li {
     display: inline-block;
+    vertical-align: top;
 }
 
 .sort-by-panel .sort-by-price,
@@ -1824,7 +1839,7 @@ aside .btn-show {
     right: 50px;
     width: 9px;
     height: 9px;
-    background: ;
+    background: transparent;
 }
 
 .sort-by-panel .to-top {
@@ -1888,6 +1903,7 @@ aside .btn-show {
 
 .paginator li {
     display: inline-block;
+    vertical-align: top;
 }
 
 .paginator a {
@@ -1985,7 +2001,6 @@ aside .btn-show:active {
 /*popups - write us*/
 
 .write-us {
-    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -2096,6 +2111,7 @@ aside .btn-show:active {
 
 .added-to-cart-controls a {
     display: inline-block;
+    vertical-align: top;
 }
 
 .added-to-cart-controls a:first-child {
@@ -2143,7 +2159,7 @@ aside .btn-show:active {
 /*popups - map*/
 
 .popup-map {
-    display: none;
+    display: block;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -2165,7 +2181,7 @@ aside .btn-show:active {
 /*popups - modal overlay*/
 
 .modal-overlay {
-    display: none;
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
@@ -2173,4 +2189,50 @@ aside .btn-show:active {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 50;
+}
+
+
+/*/////////*/
+/*animation*/
+/*/////////*/
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-2000px);
+    }
+    70% {
+        transform: translateY(30px);
+    }
+    90% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/*//////////*/
+/*javascript*/
+/*//////////*/
+
+.write-us {
+    display: none;
+}
+
+.popup-map {
+    display: none;
+}
+
+.modal-overlay {
+    display: none;
+}
+
+.modal-overlay-show {
+    display: block;
+}
+
+.popup-show {
+    display: block;
+    animation: bounce 0.6s;
 }
