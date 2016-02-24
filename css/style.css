@@ -505,8 +505,8 @@ h2 {
 .btn {
     display: block;
     width: 145px;
-   /* height: 14px;*/
-    padding: 12px 55px;
+    /*height: 14px;*/
+    padding: 10px 55px;
     font-size: 14px;
     line-height: 18px;
     color: #fff;
@@ -863,7 +863,7 @@ main .promo-block {
     bottom: 25px;
     left: 25px;
     max-width: 105px;
-    padding: 12px 45px;
+    padding: 10px 45px;
 }
 
 .slider .slider-controls {
@@ -1354,7 +1354,7 @@ main .promo-block {
 }
 
 .info-credit .btn-request {
-    padding: 12px 0;
+    padding: 10px 0;
     width: 195px;
 }
 
@@ -1440,7 +1440,7 @@ main .promo-block {
 
 .description .btn {
     width: 220px;
-    padding: 12px 0;
+    padding: 10px 0;
 }
 
 .company-info .contacts {
