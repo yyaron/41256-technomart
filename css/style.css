@@ -505,7 +505,7 @@ h2 {
 .btn {
     display: block;
     width: 145px;
-    height: 14px;
+   /* height: 14px;*/
     padding: 12px 55px;
     font-size: 14px;
     line-height: 18px;
@@ -513,6 +513,7 @@ h2 {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    font-style: normal;
     background: #ee3643;
     border-radius: 3px;
 }
