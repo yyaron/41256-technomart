@@ -451,6 +451,7 @@ h2 {
     min-height: 60px;
     background: #32425c;
     font-size: 0;
+    font-style: normal;
 }
 
 .nav-header ul {
@@ -482,6 +483,7 @@ h2 {
 
 .nav-header li:active {
     background: #1d2739;
+    border-bottom-color: #1d2739;
 }
 
 

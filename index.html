@@ -6,7 +6,7 @@
         <link href='https://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/normalize.min.css">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="css/style.min.css" rel="stylesheet">
     </head>
     <body>
         <header class="main-header">
@@ -395,11 +395,11 @@
                     <div class="clearfix">
                         <div class="details-left">
                             <label for="client-name">Ваше имя:</label>
-                        <input type="text" id="client-name" name="client-name" placeholder="Представьтесь, пожалуйста">
+                        <input type="text" id="client-name" name="client-name" placeholder="Представьтесь, пожалуйста" required>
                         </div>
                         <div class="details-right">
                              <label for="client-email">Ваш e-mail:</label>
-                            <input type="text" id="client-email" name="client-email" placeholder="Для отправки ответа">
+                            <input type="text" id="client-email" name="client-email" placeholder="Для отправки ответа" required>
                         </div>
                     </div>
                     <label for="client-msg">Текст письма</label>
@@ -438,6 +438,11 @@
         <!-- popups - modal overlay-->
 
         <div class="modal-overlay"></div>
+
+
+        <!-- // -->
+        <!-- js -->
+        <!-- // -->
 
         <script src="js/script.min.js"></script>
 
